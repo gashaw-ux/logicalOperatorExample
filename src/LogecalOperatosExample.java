@@ -4,12 +4,14 @@ public class LogecalOperatosExample {
 
         boolean isUnderage = false;
         boolean isEthiopian = true;
-        boolean hasAnID = true;
+        boolean hasAnID = false;
         boolean isPreviousVoter = false;
-        boolean criminalRecord =true;
+        boolean criminalRecord =false;
 
-        boolean canVote = !isUnderage && isEthiopian && ((hasAnID || isPreviousVoter) || (hasAnID || criminalRecord) || (isPreviousVoter || criminalRecord));
+        boolean canVote = !isUnderage && isEthiopian && ((hasAnID || isPreviousVoter) || (hasAnID || !criminalRecord) || (isPreviousVoter || !criminalRecord));
 
         System.out.println(canVote);
+
+
     }
 }
